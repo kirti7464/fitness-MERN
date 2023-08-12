@@ -22,7 +22,7 @@ function SignUp() {
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
-        const response = await axios.post('http://localhost:5000/user/create', formData);
+        const response = await axios.post('https://whip-woolen-ketch.glitch.me/user/create', formData);
         const token = response.data.token;
         localStorage.setItem('token', token);
         console.log('User signed up:', response.data);
