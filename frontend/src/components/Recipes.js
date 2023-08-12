@@ -10,7 +10,7 @@ const headers = {
 function Recipes() {
     const [recipes, setRecipes] = useState([]);
     useEffect(() => {
-      axios.get('http://localhost:5000/recipe/detail',{headers})
+      axios.get('https://whip-woolen-ketch.glitch.me/recipe/detail',{headers})
         .then(response => {
             console.log(response.data.recipe)
           setRecipes(response.data.recipe);
